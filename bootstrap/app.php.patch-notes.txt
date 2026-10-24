@@ -1,0 +1,8 @@
+Untuk Laravel 11/12, daftarkan alias middleware `role` pada `bootstrap/app.php` di dalam `withMiddleware`:
+
+use App\Http\Middleware\RoleMiddleware;
+->withMiddleware(function ($middleware) {
+    $middleware->alias(['role' => RoleMiddleware::class]);
+})
+
+File ini adalah catatan karena struktur bootstrap dapat berbeda antar versi Laravel.
